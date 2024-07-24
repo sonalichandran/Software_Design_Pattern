@@ -4,7 +4,7 @@ import React from 'react';
 const Register = () => {
   return (
     <div className=" flex items-center justify-center h-screen">
-      <div className="bg-black p-8 rounded-lg shadow-lg max-w-sm w-full">
+      <div className="p-8 rounded-lg shadow-lg max-w-sm w-full">
         <h2 className="text-2xl font-bold mb-6 text-white flex items-center justify-center">Register</h2>
         <form id="registerForm" className="space-y-4">
           <div>
@@ -43,7 +43,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-black border border-white text-white font-semibold rounded-md shadow-sm hover:bg-white hover:text-black  focus:ring-2 focus:ring-offset-2 focus:ring-black focus:border-white focus:text-black">
+            className="w-full py-2 px-4 bg-primary border border-white text-white font-semibold rounded-md shadow-sm hover:bg-white hover:text-black  focus:ring-2 focus:ring-offset-2 focus:ring-black focus:border-white focus:text-black">
             
             Register
           </button>
