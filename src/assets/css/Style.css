@@ -73,4 +73,10 @@
     @apply bg-background text-foreground;
   }
 }
+.active
+{
+  color:burlywood;
+ 
+}
+
 

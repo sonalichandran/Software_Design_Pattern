@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="w-full max-w-sm  p-8 rounded-lg shadow-md border border-primary">
-        <h2 className="text-2xl font-bold text-white mb-6 flex items-center justify-center">Login</h2>
+        <h2 className="text-2xl font-bold  mb-6 flex items-center justify-center">Login</h2>
         <form>
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-white-100">Email</label>
