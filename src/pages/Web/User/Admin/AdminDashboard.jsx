@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/card";
 
 const chartData = [
-  { month: 'January', desktop: 4000, mobile: 2400 },
-  { month: 'February', desktop: 3000, mobile: 1398 },
-  { month: 'March', desktop: 2000, mobile: 9800 },
-  { month: 'April', desktop: 2780, mobile: 3908 },
-  { month: 'May', desktop: 1890, mobile: 4800 },
-  { month: 'June', desktop: 2390, mobile: 3800 },
-  { month: 'July', desktop: 3490, mobile: 4300 },
+  { month: 'January', views: 4000, orders: 2400 },
+  { month: 'February', views: 3000, orders: 1398 },
+  { month: 'March', views: 2000, orders: 9800 },
+  { month: 'April', views: 2780, orders: 3908 },
+  { month: 'May', views: 1890, orders: 4800 },
+  { month: 'June', views: 2390, orders: 3800 },
+  { month: 'July', views: 3490, orders: 4300 },
 ];
 
 const AdminDashboard = () => {
@@ -89,8 +89,8 @@ const AdminDashboard = () => {
           <XAxis dataKey="month" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="desktop" fill="#8884d8" />
-          <Bar dataKey="mobile" fill="#82ca9d" />
+          <Bar dataKey="views" fill="#8884d8" />
+          <Bar dataKey="orders" fill="#82ca9d" />
         </BarChart>
       </div>
     </>
