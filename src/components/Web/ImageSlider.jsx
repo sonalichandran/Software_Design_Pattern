@@ -8,7 +8,7 @@ const slides = [
   'https://ik.imagekit.io/ka538n3cv/10000067_24-fresho-capsicum-green.webp?updatedAt=1721882522604',
   'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTillbcJcSdLW71cqOMNTtPtMTrJ0NTLz3icpK8VZVLMxXhCM1wsj2ha5pzEWVVfoDNwFQT1u93oHe5TyYW0LQSYb0oGOhWzHtQQAxxHF02&usqp=CAE',
   'https://www.bigbasket.com/media/uploads/p/m/10001008_3-fresho-chicken-neck.jpg?tr=w-1920,q=80',
-  'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQxVhqSlp2GBip67FDnE2aRUz9IhgL2H7RP7U53LTadytXUFQmwP4IZanKdQyhWsHkY8R5XN2I7YIMdlGtiURQR5RpDiM7q2zDVnxfSLzsVjofR5BTgXon6jQ&usqp=CAE',
+  'https://www.bigbasket.com/media/uploads/p/l/30009286_10-fresho-blueberry.jpg',
   'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUt6uE-Fwde94pbDT2e3cHAriIdvC-r6XeL-ytdK9NZgKm73HyLNyVTl7QPsWW8eCkeQiTVMvI3148PjoBPFWtWwO3d8ZWYU_qmqHWUKU&usqp=CAE',
   'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTlH_RuP8L2OVaEvRUgyT6OITpfMUcnQslYwp_ri51UXdO4DCjuSv4w7L8pbxwsBuWwgYCwgxNleggT1sDUHgPjCjaLc2N9h4OTdauNjao&usqp=CAE',
   'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSwa0ZVizgdb26CGf6IMTk8jMESKu6BEujQxoJcDMg6ACyYlOqPbi3QsWqTphBhtCaBtolFBDCCXTT0sC5pHcllMwZMl_XJYJKzxd9lkqWz&usqp=CAE'
@@ -33,7 +33,7 @@ const ImageSlider = () => {
   }, [transitionCount]);
 
   return (
-    <div className="w-full mx-auto overflow-hidden py-16 justify-center flex relative">
+    <div className="w-full mx-auto overflow-hidden py-16 justify-center flex ">
       <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {slides.map((slide, index) => (
           <img

@@ -4,7 +4,7 @@ import React from 'react';
 const Login = () => {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="w-full max-w-sm  p-8 rounded-lg shadow-md border border-primary">
+      <div className="w-full max-w-sm  p-8 rounded-lg shadow-md shadow-white border-2 border-slate-900">
         <h2 className="text-2xl font-bold  mb-6 flex items-center justify-center">Login</h2>
         <form>
           <div className="mb-4">
@@ -32,12 +32,12 @@ const Login = () => {
           
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-primary border border-white text-white font-semibold rounded-md shadow-sm hover:bg-white hover:text-black  focus:ring-2 focus:ring-offset-2 focus:ring-black focus:border-white focus:text-black">
+            className="w-full py-2 px-4 bg-slate-400 border border-white text-white font-semibold rounded-md shadow-sm hover:bg-white hover:text-black  focus:ring-2 focus:ring-offset-2 focus:ring-black focus:border-white focus:text-black">
             Login
           </button>
 
           <div className="mt-4 flex justify-center items-center">
-          <p>Don't have an account?<a href="register.html" id="registerLink">Create one</a></p>
+          <p>Don't have an account?<a href="/register" id="registerLink">Create one</a></p>
           </div>
         </form>
       </div>

@@ -12,6 +12,15 @@ import Notfound from './pages/Web/Notfound'
 import Register from './pages/Web/Register'
 import Weblayout from './layout/Weblayout'
 import Login from './pages/Web/Login'
+import AdminLayout from './layout/Adminlayout'
+import AdminDashboard from './pages/Web/User/Admin/AdminDashboard'
+import AdminUsers from './pages/Web/User/Admin/AdminUser'
+import AdminProduct from './pages/Web/User/Admin/AdminProduct'
+import AdminOrders from './pages/Web/User/Admin/AdminOrder'
+import AdminVendors from './pages/Web/User/Admin/AdminVendors'
+import FruitList from './pages/Web/FruitList'
+import Weblayout2 from './layout/Weblayout2'
+import VegetableList from './pages/Web/Vegetables'
 
 
 export default function App() {
@@ -30,8 +39,26 @@ export default function App() {
           <Route path='/login' element={<Login/>}/>
         
           <Route path='/register' element={<Register/>}/>
+         
+        
           <Route path='*' element={<Notfound/>}/>
         </Route>
+        <Route element={<AdminLayout />}>
+                        <Route path='/admin/dashboard' element={<AdminDashboard />} />
+                        <Route path='/admin/users' element={<AdminUsers />} />
+                        <Route path='/admin/product' element={<AdminProduct />} />
+                        <Route path='/admin/orders' element={<AdminOrders />} />
+                        <Route path='/admin/vendors' element={<AdminVendors />} />
+                    </Route>
+        <Route element={<Weblayout2/>}>
+                        <Route path='/fruits' element={<FruitList />} />
+                        <Route path='/vegetables' element={<VegetableList />} />
+                        <Route path='/meat' />
+                        <Route path='milk' />
+                        <Route path='grocery' />
+                        
+                    </Route>
+
         </Routes>
         </BrowserRouter>
      

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ModeToggle } from '../mode-toggle';
+import { ShoppingCart } from 'lucide-react';
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -20,25 +21,7 @@ const Navbar = () => {
     }
   ];
 
-  const CategoryLinks = [
-    {
-      title: "Fresh Produce",
-      path: "/category/freshproduce"
-    },
-    {
-      title: "Meat and Seafood",
-      path: "/category/meatandseafood"
-    },
-    {
-      title: "Dairy Products",
-      path: "/category/dairyproducts"
-    
-    },
-    {
-      title: "Pantry Staples",
-      path: "/category/pantrystaples"
-    }
-  ];
+ 
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -46,8 +29,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-[9vh] flex flex-row justify-center items-center  bg-black border-grey shadow-lg shadow-gray-400">
-        <div className="w-1/4 h-full  font-bold flex justify-center items-center text-4xl  bg-black text-white">
+      <div className="absolute top-0 left-0 w-full h-[9vh] flex flex-row justify-start pl-12 items-center  bg-black border-grey shadow-md shadow-gray-400">
+        <div className="w-1/4  h-full  font-bold flex justify-start items-center text-4xl  bg-black text-white">
+        <ShoppingCart size={46} strokeWidth={2} className="pr-2" />
           ApExGrOcEr
         </div>
         {/* <div className="search-bar"> */}
@@ -59,7 +43,7 @@ const Navbar = () => {
       /> */}
       {/* <button  className="search-button border-2 h-8 w-16 bg-black">Search</button> */}
     {/* </div> */}
-        <div className='w-2/4 h-full font-bold flex flex-row justify-end items-center gap-8 text-white'>
+        <div className='w-3/4 h-full font-bold flex flex-row justify-end pr-20 items-center gap-8 text-white'>
           {NavLinks.map((links, index) => (
             <li key={index} className='list-none'>
               <NavLink to={links.path}>

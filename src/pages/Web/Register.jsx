@@ -4,11 +4,11 @@ import React from 'react';
 const Register = () => {
   return (
     <div className=" flex items-center justify-center h-screen">
-      <div className="p-8 rounded-lg shadow-lg max-w-sm w-full">
-        <h2 className="text-2xl font-bold mb-6 text-white flex items-center justify-center">Register</h2>
+      <div className="p-8 rounded-lg shadow-sm shadow-white max-w-sm w-full border border-black ">
+        <h2 className="text-2xl font-bold mb-6  flex items-center justify-center">Register</h2>
         <form id="registerForm" className="space-y-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-white">Username</label>
+            <label htmlFor="username" className="block text-sm font-medium">Username</label>
             <input
               type="text"
               id="username"
@@ -19,7 +19,7 @@ const Register = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium">Email</label>
             <input
               type="email"
               id="email"
@@ -30,7 +30,7 @@ const Register = () => {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-white">Password</label>
+            <label htmlFor="password" className="block text-sm font-medium">Password</label>
             <input
               type="password"
               id="password"
@@ -43,13 +43,13 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-primary border border-white text-white font-semibold rounded-md shadow-sm hover:bg-white hover:text-black  focus:ring-2 focus:ring-offset-2 focus:ring-black focus:border-white focus:text-black">
+            className="w-full py-2 px-4 bg-slate-400 border border-white text-white font-semibold rounded-md shadow-sm hover:bg-white hover:text-black  focus:ring-2 focus:ring-offset-2 focus:ring-black focus:border-white focus:text-black">
             
             Register
           </button>
               </div>
               <div className="mt-4 flex justify-center items-center">
-          <p>Already having an account?<a href="register.html" id="registerLink">Login</a></p>
+          <p>Already having an account?<a href="/login" id="registerLink">Login</a></p>
           </div>
         </form>
       </div>
