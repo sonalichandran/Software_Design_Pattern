@@ -66,7 +66,7 @@ export default function App() {
                         
                     </Route>
         <Route element={<UserLayout/>}>
-                        <Route path='/user/dashboard'/>
+                        <Route path='/user/dashboard' element={<UserDashboard/>}/>
                         <Route path='/user/orders' element={<OrderList/>}/>
                         <Route path='/user/cart' element={<Cart/>}/>
                         <Route path='/user/favourite' element={<Favourite/>}/>
