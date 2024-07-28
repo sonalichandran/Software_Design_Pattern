@@ -4,6 +4,7 @@ import TypingAnimation from "@/components/magicui/typing-animation";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import ShinyButton from "@/components/magicui/shiny-button";
 import Nav from '@/components/Web/Navbar2';
+import { NavLink } from 'react-router-dom';
 
 
 const Home = () => {
@@ -19,11 +20,11 @@ const Home = () => {
             />
           </div>
           <div className="pt-10">
-            <ShimmerButton className="shadow-2xl border-r-2">
+            <NavLink to="/fruits" ><ShimmerButton className="shadow-2xl border-r-2">
               <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                 Shop Now
               </span>
-            </ShimmerButton>
+            </ShimmerButton></NavLink>
           </div>
         </div>
       </div>

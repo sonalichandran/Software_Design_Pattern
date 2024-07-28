@@ -16,19 +16,19 @@ const slides = [
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [transitionCount, setTransitionCount] = useState(0); // Track number of automatic transitions
+  const [transitionCount, setTransitionCount] = useState(0); 
 
   const goToNextSlide = () => {
-    if (transitionCount >= 3) return; // Stop after 3 transitions
+    if (transitionCount >= 3) return; 
 
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     setTransitionCount((prevCount) => prevCount + 1);
   };
 
   useEffect(() => {
-    if (transitionCount < 2) { // Only set up the timer if less than 3 transitions have occurred
-      const timer = setTimeout(goToNextSlide, 3000); // Slide transition interval
-      return () => clearTimeout(timer); // Cleanup timer on unmount
+    if (transitionCount < 2) { 
+      const timer = setTimeout(goToNextSlide, 3000); 
+      return () => clearTimeout(timer); 
     }
   }, [transitionCount]);
 
@@ -44,19 +44,8 @@ const ImageSlider = () => {
           />
         ))}
       </div>
-      
-      <button
-        onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length)}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2  p-2 rounded-full"
-      >
-        &lt;
-      </button>
-      <button
-        onClick={goToNextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full"
-      >
-        &gt;
-      </button>
+     
+   
     </div>
   );
 };

@@ -37,7 +37,7 @@ import {
 
 const AdminUsers = () => {
   const [open, setOpen] = useState(false)
-  const invoices = [
+  const users = [
     
     {
       UserId: "user001",
@@ -91,12 +91,12 @@ const AdminUsers = () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {invoices.map((invoice) => (
-                <TableRow key={invoice.invoice}>
-                  <TableCell className="font-medium">{invoice.UserId}</TableCell>
-                  <TableCell>{invoice.Username}</TableCell>
-                  <TableCell>{invoice.Email}</TableCell>
-                  <TableCell >{invoice.Password}</TableCell>
+              {users.map((user) => (
+                <TableRow key={user.user}>
+                  <TableCell className="font-medium">{user.UserId}</TableCell>
+                  <TableCell className="font-medium">{user.Username}</TableCell>
+                  <TableCell>{user.Email}</TableCell>
+                  <TableCell >{user.Password}</TableCell>
                   <TableCell>
                     <span className='w-full h-full flex justify-center items-center gap-3'>
                       <Edit className='h-8 w-8 p-1 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-background rounded-md' />

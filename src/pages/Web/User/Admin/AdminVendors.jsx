@@ -93,7 +93,7 @@ const AdminVendors = () => {
               {vendors.map((vendor) => (
                 <TableRow key={vendor.vendor}>
                   <TableCell className="font-medium">{vendor.vendorid}</TableCell>
-                  <TableCell>{vendor.vendor}</TableCell>
+                  <TableCell className="font-medium">{vendor.vendor}</TableCell>
                   <TableCell>{vendor.contact}</TableCell>
                   <TableCell >{vendor.address}</TableCell>
                   <TableCell>

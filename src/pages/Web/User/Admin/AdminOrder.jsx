@@ -39,44 +39,44 @@ const AdminOrders = () => {
   const [open, setOpen] = useState(false)
   const orders = [
     {
-      order: "INV001",
-      paymentStatus: "Paid",
+      order: "ord001",
+      orderstatus: "Delivered",
       totalAmount: "Rs.250.00",
       paymentMethod: "Credit Card",
     },
     {
-      order: "INV002",
-      paymentStatus: "Pending",
+      order: "ord002",
+      orderstatus: "Shipped",
       totalAmount: "Rs.150.00",
       paymentMethod: "PayPal",
     },
     {
-      order: "INV003",
-      paymentStatus: "Unpaid",
+      order: "ord003",
+      orderstatus: "Delivered Tomorrow",
       totalAmount: "Rs.350.00",
-      paymentMethod: "Bank Transfer",
+      paymentMethod: "Cash On Delivery",
     },
     {
-      order: "INV004",
-      paymentStatus: "Paid",
+      order: "ord004",
+      orderstatus: "Dispatched",
       totalAmount: "Rs.450.00",
       paymentMethod: "Credit Card",
     },
     {
-      order: "INV005",
-      paymentStatus: "Paid",
+      order: "ord005",
+      orderstatus: "Shipped",
       totalAmount: "Rs.550.00",
       paymentMethod: "PayPal",
     },
     {
-      order: "INV006",
-      paymentStatus: "Pending",
+      order: "ord006",
+      orderstatus: "Delivered",
       totalAmount: "Rs.200.00",
-      paymentMethod: "Bank Transfer",
+      paymentMethod: "Cash On Delivery",
     },
     {
-      order: "INV007",
-      paymentStatus: "Unpaid",
+      order: "ord007",
+      orderstatus: "Dispatched",
       totalAmount: "Rs.300.00",
       paymentMethod: "Credit Card",
     },
@@ -98,22 +98,17 @@ const AdminOrders = () => {
                 <TableHead>Status</TableHead>
                 <TableHead>Method</TableHead>
                 <TableHead >Amount</TableHead>
-                <TableHead className="flex justify-center ">Actions</TableHead>
+               
               </TableRow>
             </TableHeader>
             <TableBody>
               {orders.map((order) => (
                 <TableRow key={order.order}>
                   <TableCell className="font-medium">{order.order}</TableCell>
-                  <TableCell>{order.paymentStatus}</TableCell>
+                  <TableCell>{order.orderstatus}</TableCell>
                   <TableCell>{order.paymentMethod}</TableCell>
                   <TableCell >{order.totalAmount}</TableCell>
-                  <TableCell>
-                    <span className='w-full h-full flex justify-center items-center gap-3'>
-                      <Edit className='h-8 w-8 p-1 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-background rounded-md' />
-                      <TrashIcon className='h-8 w-8 p-1 text-red-500 cursor-pointer hover:bg-red-500 hover:text-background rounded-md' />
-                    </span>
-                  </TableCell>
+                 
                 </TableRow>
               ))}
             </TableBody>

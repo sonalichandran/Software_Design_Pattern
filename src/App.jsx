@@ -21,6 +21,10 @@ import AdminVendors from './pages/Web/User/Admin/AdminVendors'
 import FruitList from './pages/Web/FruitList'
 import Weblayout2 from './layout/Weblayout2'
 import VegetableList from './pages/Web/Vegetables'
+import UserLayout from './layout/Userlayout'
+import UserDashboard from './pages/Web/User/UserDashboard'
+
+
 
 
 export default function App() {
@@ -56,6 +60,14 @@ export default function App() {
                         <Route path='/meat' />
                         <Route path='milk' />
                         <Route path='grocery' />
+                        
+                    </Route>
+        <Route element={<UserLayout/>}>
+                        <Route path='/user/dashboard'/>
+                        <Route path='/user/orders'/>
+                        <Route path='/user/cart'/>
+                        <Route path='/user/favourite'/>
+                    
                         
                     </Route>
 

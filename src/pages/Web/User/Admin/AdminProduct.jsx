@@ -1,18 +1,5 @@
 import React, { useState } from 'react'
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-
 import { BellRing, Check, Edit, Plus, TrashIcon } from "lucide-react"
-
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -26,45 +13,46 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
 } from "@/components/ui/sheet"
 
 const AdminProduct = () => {
   const [open, setOpen] = useState(false)
   const products = [
     {
+      ProductId: "prod001",
       Productname: "Cheese",
       Category: "Milk Products",
       Price: "Rs.50",
       Vendor: "XXX",
     },
     {
+      ProductId: "prod002",
       Productname: "Apple",
       Category: "Fruits",
       Price: "Rs.150",
       Vendor: "YYY",
     },
     {
+      ProductId: "prod003",
       Productname: "Fish",
       Category: "Fresh Meat",
       Price: "Rs.500",
       Vendor: "ZZZ",
     },
     {
+      ProductId: "prod004",
       Productname: "Carrot",
       Category: "Vegetables",
       Price: "Rs.70",
       Vendor: "MMM",
     },
-   
-    
   ]
+
   return (
     <div className='m-1 p-4'>
       <Card className='shadow-sm shadow-primary'>
@@ -74,34 +62,31 @@ const AdminProduct = () => {
             <Plus className='h-10 w-10 mr-2' /> Add
           </Button>
         </CardHeader>
-        <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[100px]">Product</TableHead>
-                <TableHead>Category</TableHead>
-                <TableHead>Price</TableHead>
-                <TableHead >Vendor</TableHead>
-                <TableHead className="flex justify-center ">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {products.map((product) => (
-                <TableRow key={product.product}>
-                  <TableCell className="font-medium">{product.Productname}</TableCell>
-                  <TableCell>{product.Category}</TableCell>
-                  <TableCell>{product.Price}</TableCell>
-                  <TableCell >{product.Vendor}</TableCell>
-                  <TableCell>
-                    <span className='w-full h-full flex justify-center items-center gap-3'>
-                      <Edit className='h-8 w-8 p-1 text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-background rounded-md' />
-                      <TrashIcon className='h-8 w-8 p-1 text-red-500 cursor-pointer hover:bg-red-500 hover:text-background rounded-md' />
-                    </span>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+        <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {products.map((product) => (
+            <Card key={product.ProductId} className="relative">
+              <CardHeader>
+                <div className="flex flex-row">
+
+                <CardTitle>{product.Productname}
+
+                </CardTitle>
+                <div className="flex flex-row pl-32 gap-2" >
+
+                <Edit className='h-6 w-6 text-blue-500 cursor-pointer hover:text-blue-700 ' />
+                <TrashIcon className='h-6 w-6 text-red-500 cursor-pointer hover:text-red-700 ' />
+                </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <img src="" className="h-20 w-20"></img>
+                <p><strong>Category:</strong> {product.Category}</p>
+                <p><strong>Price:</strong> {product.Price}</p>
+                <p><strong>Vendor:</strong> {product.Vendor}</p>
+              </CardContent>
+             
+            </Card>
+          ))}
         </CardContent>
       </Card>
 
@@ -118,27 +103,33 @@ const AdminProduct = () => {
               <Input id="name" className="col-span-3" />
             </div>
             <div className="flex flex-col items-start gap-4">
-              <Label htmlFor="username" className="text-right">
+              <Label htmlFor="name" className="text-right">
+                Product Image
+              </Label>
+              <Input id="name" type="file" className="col-span-3" />
+            </div>
+            <div className="flex flex-col items-start gap-4">
+              <Label htmlFor="category" className="text-right">
                 Category
               </Label>
-              <Input id="username" className="col-span-3" />
+              <Input id="category" className="col-span-3" />
             </div>
             <div className="flex flex-col items-start gap-4">
-              <Label htmlFor="email" className="text-right">
+              <Label htmlFor="price" className="text-right">
                 Price
               </Label>
-              <Input id="email" className="col-span-3" />
+              <Input id="price" className="col-span-3" />
             </div>
             <div className="flex flex-col items-start gap-4">
-              <Label htmlFor="password" className="text-right">
-               Vendor
+              <Label htmlFor="vendor" className="text-right">
+                Vendor
               </Label>
-              <Input id="password" className="col-span-3" />
+              <Input id="vendor" className="col-span-3" />
             </div>
           </div>
-          <SheetFooter className='flex flex-col flex-1'>
-            <Button className='w-1/2 outline bg-red-400/90 hover:bg-red-400' onClick={() => setOpen(!open)}>Cancel</Button>
-            <Button type="submit" className='w-1/2'>Save changes</Button>
+          <SheetFooter className='flex justify-between'>
+            <Button className='bg-red-400 hover:bg-red-500' onClick={() => setOpen(!open)}>Cancel</Button>
+            <Button type="submit">Save changes</Button>
           </SheetFooter>
         </SheetContent>
       </Sheet>
