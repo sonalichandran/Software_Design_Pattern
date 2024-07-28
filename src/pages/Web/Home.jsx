@@ -5,6 +5,8 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 import ShinyButton from "@/components/magicui/shiny-button";
 import Nav from '@/components/Web/Navbar2';
 import { NavLink } from 'react-router-dom';
+import PulsatingButton from "/src/components/ui/pulsating-button";
+
 
 
 const Home = () => {
@@ -29,6 +31,13 @@ const Home = () => {
         </div>
       </div>
 <Nav />
+<div className="pt-10 pl-96 flex flex-row gap-4 text-white">
+
+ <PulsatingButton className="bg-red-500 border-red-500">Cash On Delivery</PulsatingButton>;
+ <PulsatingButton className="bg-red-500 border-red-500">Subscription Box</PulsatingButton>;
+ <PulsatingButton className="bg-red-500 border-red-500">Free Delivery on First COD Order</PulsatingButton>;
+ <PulsatingButton className="bg-red-500 border-red-500">Flash Sale Alerts</PulsatingButton>;
+ </div>
 
     </>
   );

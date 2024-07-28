@@ -16,6 +16,15 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    animation: {
+      pulse: "pulse var(--duration, 2s) ease-out infinite",
+    },
+    keyframes: {
+      pulse: {
+        "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color, rgba(255, 0, 0, 0.5))" },
+        "50%": { boxShadow: "0 0 0 8px var(--pulse-color, rgba(255, 0, 0, 0.5))" },
+      },
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -73,6 +82,15 @@ module.exports = {
       },
     },
   },
+   animation: {
+        pulse: "pulse var(--duration) ease-out infinite",
+      },
+      keyframes: {
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+        },
+      },
   plugins: [require("tailwindcss-animate")],
   
 }

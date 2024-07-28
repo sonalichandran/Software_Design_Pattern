@@ -3,7 +3,7 @@ import React from 'react';
 
 const Register = () => {
   return (
-    <div className=" flex items-center justify-center h-screen">
+    <div className=" flex items-center pl-80 h-screen">
       <div className="p-8 rounded-lg shadow-sm shadow-white max-w-sm w-full border border-black ">
         <h2 className="text-2xl font-bold mb-6  flex items-center justify-center">Register</h2>
         <form id="registerForm" className="space-y-4">
@@ -53,6 +53,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotvsSVsktQNlZs4kbv-7GbHuEaSs3d058cg&s" className="pl-60 h-80"></img>
     </div>
   );
 };

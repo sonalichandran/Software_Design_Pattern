@@ -75,8 +75,8 @@ const AdminUsers = () => {
       <Card className='shadow-sm shadow-primary'>
         <CardHeader className='w-full flex flex-row justify-between items-center'>
           <CardTitle>Users</CardTitle>
-          <Button onClick={() => setOpen(!open)}>
-            <Plus className='h-10 w-10 mr-2' /> Add
+          <Button onClick={() => setOpen(!open)} className="bg-slate-400 hover:bg-black w-20">
+             Add
           </Button>
         </CardHeader>
         <CardContent>

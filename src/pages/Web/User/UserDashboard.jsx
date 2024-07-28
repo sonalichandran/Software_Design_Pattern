@@ -18,8 +18,10 @@ const UserDashboard = () => {
   };
 
   return (
-    <div className="w-screen pt-20 pl-64 flex">
-      <div className="w-full max-w-md p-6 shadow-md rounded-md flex-col flex bg-white">
+    <>
+      <p className="text-center font-bold pt-8 pl-80 text-lg flex">Update Your Profile to Keep Engaged</p>
+    <div className="w-screen pt-16 pl-64 flex">
+      <div className="w-full max-w-md p-6 shadow-md shadow-slate-400 rounded-md flex-col flex bg-white">
         <h2 className="text-2xl font-bold mb-6 text-center">User Details</h2>
         <div className="mb-4 flex items-center">
           <label className="w-32 text-gray-700">Username</label>
@@ -81,7 +83,15 @@ const UserDashboard = () => {
           </button>
         </div>
       </div>
+      {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRIJPaTnmKB5meJwH-FTpp5YeEEkFhvnLuNA&s" alt></img> */}
+      <div className="pl-32 gap-3 flex-col flex">
+
+      <p className=" pt-28 flex text-9xl ">🐱</p>
+      <p className="text-lg font-bold">Your profile, your preferences,</p>
+        <p className="text-lg font-bold"> your perfect shopping experience.</p>
     </div>
+      </div>
+    </>
   );
 };
 

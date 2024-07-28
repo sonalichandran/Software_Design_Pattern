@@ -3,7 +3,8 @@ import React from 'react';
 
 const Login = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <>
+    <div className="flex items-center pl-80 h-screen">
       <div className="w-full max-w-sm  p-8 rounded-lg shadow-md shadow-white border-2 border-slate-900">
         <h2 className="text-2xl font-bold  mb-6 flex items-center justify-center">Login</h2>
         <form>
@@ -23,7 +24,7 @@ const Login = () => {
               id="password"
               className="mt-1 block w-full px-3 text-black py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm "
               placeholder="•••••••• "
-            />
+              />
           </div>
           <div className="mb-4">
 
@@ -41,7 +42,11 @@ const Login = () => {
           </div>
         </form>
       </div>
+      <img src="https://img.freepik.com/free-psd/3d-illustration-supermarket_23-2150942240.jpg" className="pl-48 h-80" alt></img>
     </div>
+    <div>
+    </div>
+    </>
   );
 };
 

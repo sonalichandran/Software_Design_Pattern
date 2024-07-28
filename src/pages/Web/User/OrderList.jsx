@@ -1,9 +1,16 @@
 import React from 'react';
 
 const OrderList = () => {
-  return (
-    <div className="pl-20 pt-5 flex flex-col gap-6">
+  return (<>
+  <div className="flex flex-row left-10 pl-20 gap-96 pt-10 ">
+
       <h1 className="font-bold text-2xl text-gray-800">Orders</h1>
+      <div className="pl-52">
+
+      <button className="left-96 flex border border-black rounded-md p-2">Track Order</button>
+      </div>
+  </div>
+    <div className="pl-20 pt-5 flex flex-col gap-6">
       <div className="flex flex-col mb-4">
         <p className="font-semibold text-gray-600">Order Id: <span className="text-gray-800">ord0001</span></p>
         <p className="font-semibold text-gray-600">Address: <span className="text-gray-800">xxx</span></p>
@@ -19,6 +26,7 @@ const OrderList = () => {
         <div className="ml-auto pr-6 flex font-bold text-gray-800">
           Rs.45
         </div>
+        <button className="text-red-500">Cancel Order</button>
       </div>
 
       <div className="h-32 w-4/6 border border-gray-300 shadow-lg rounded-md flex items-center p-4">
@@ -30,12 +38,17 @@ const OrderList = () => {
         <div className="ml-auto pr-6 flex font-bold text-gray-800">
           Rs.55
         </div>
+        <button className="text-red-500">Cancel Order</button>
       </div>
 
-      <div className="w-4/6 justify-center flex font-bold text-lg text-gray-800 mt-4">
+      <div className=" flex font-bold text-lg text-gray-800 mt-4 flex-row gap-4">
         Total: Rs.100
+        <button className="font-medium text-red-700"> Get Invoice</button>
       </div>
+      
+      
     </div>
+  </>
   );
 }
 

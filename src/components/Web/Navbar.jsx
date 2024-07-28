@@ -29,10 +29,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-[9vh] flex flex-row justify-start pl-12 items-center  bg-black border-grey shadow-md shadow-gray-400">
-        <div className="w-1/4  h-full  font-bold flex justify-start items-center text-4xl  bg-black text-white">
-        <ShoppingCart size={46} strokeWidth={2} className="pr-2" />
+      <div className="absolute top-0 left-0 w-full h-[9vh] flex flex-row justify-start pl-12 items-center  bg-black border-grey shadow-lg shadow-gray-400">
+        <div className="w-1/4  h-full  font-bold flex justify-start items-center text-4xl  bg-black text-white ">
+        <NavLink to="/">  <div className="flex-row flex gap-4"> <ShoppingCart size={46} strokeWidth={2} />
           ApExGrOcEr
+          </div>
+          </NavLink>
         </div>
         {/* <div className="search-bar"> */}
       {/* <input

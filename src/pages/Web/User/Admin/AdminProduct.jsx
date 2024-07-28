@@ -58,8 +58,8 @@ const AdminProduct = () => {
       <Card className='shadow-sm shadow-primary'>
         <CardHeader className='w-full flex flex-row justify-between items-center'>
           <CardTitle>Products</CardTitle>
-          <Button onClick={() => setOpen(!open)}>
-            <Plus className='h-10 w-10 mr-2' /> Add
+          <Button onClick={() => setOpen(!open)} className="bg-slate-400 hover:bg-black w-20">
+           Add
           </Button>
         </CardHeader>
         <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

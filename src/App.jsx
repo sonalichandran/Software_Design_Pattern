@@ -26,6 +26,9 @@ import UserDashboard from './pages/Web/User/UserDashboard'
 import OrderList from './pages/Web/User/OrderList'
 import Cart from './pages/Web/User/Cart'
 import Favourite from './pages/Web/User/Favourite'
+import MeatList from './pages/Web/MeatList'
+import MilkList from './pages/Web/MilkList'
+import GroceryList from './pages/Web/GroceryList'
 
 
 
@@ -60,9 +63,9 @@ export default function App() {
         <Route element={<Weblayout2/>}>
                         <Route path='/fruits' element={<FruitList />} />
                         <Route path='/vegetables' element={<VegetableList />} />
-                        <Route path='/meat' />
-                        <Route path='milk' />
-                        <Route path='grocery' />
+                        <Route path='/meat' element={<MeatList/>} />
+                        <Route path='milk'  element={<MilkList/>}/>
+                        <Route path='grocery' element={<GroceryList/>} />
                         
                     </Route>
         <Route element={<UserLayout/>}>
