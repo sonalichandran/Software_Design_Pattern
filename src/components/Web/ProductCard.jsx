@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-between items-center">
         <span className="font-bold text-xl text-gray-800 dark:text-white">{product.price}</span>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
           Add to Cart
         </button>
       </div>
