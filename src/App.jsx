@@ -29,6 +29,7 @@ import Favourite from './pages/Web/User/Favourite'
 import MeatList from './pages/Web/MeatList'
 import MilkList from './pages/Web/MilkList'
 import GroceryList from './pages/Web/GroceryList'
+import AdminLogin from './pages/Web/AdminLogin'
 
 
 
@@ -49,6 +50,7 @@ export default function App() {
           <Route path='/login' element={<Login/>}/>
         
           <Route path='/register' element={<Register/>}/>
+          <Route path='/adminlogin' element={<AdminLogin/>}/>
          
         
           <Route path='*' element={<Notfound/>}/>

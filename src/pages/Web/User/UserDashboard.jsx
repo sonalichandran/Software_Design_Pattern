@@ -22,7 +22,7 @@ const UserDashboard = () => {
       <p className="text-center font-bold pt-8 pl-80 text-lg flex">Update Your Profile to Keep Engaged</p>
     <div className="w-screen pt-16 pl-64 flex">
       <div className="w-full max-w-md p-6 shadow-md shadow-slate-400 rounded-md flex-col flex bg-white">
-        <h2 className="text-2xl font-bold mb-6 text-center">User Details</h2>
+      <p className="text-2xl font-bold mb-6 text-center text-gray-500">User Details</p>
         <div className="mb-4 flex items-center">
           <label className="w-32 text-gray-700">Username</label>
           <input

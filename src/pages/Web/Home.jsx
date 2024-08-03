@@ -31,7 +31,7 @@ const Home = () => {
         </div>
       </div>
 <Nav />
-<div className="pt-10 pl-96 flex flex-row gap-4 text-white">
+<div className="pt-14 pl-96 flex flex-row gap-4 text-white">
 
  <PulsatingButton className="bg-red-500 border-red-500">Cash On Delivery</PulsatingButton>;
  <PulsatingButton className="bg-red-500 border-red-500">Subscription Box</PulsatingButton>;
