@@ -18,16 +18,7 @@ const Register = () => {
       password: passwordRef.current.value
     };
 
-    try {
-      const response = await axios.post('http://localhost:8080/request/register', signup);
-      if (response.data) {
-        setTimeout(() => {
-          navigate('/login');
-        }, 1500);
-      }
-    } catch (error) {
-      console.error('Signup failed:', error);
-    }
+    const res=await Signup(signup.username,signup.email,signup.password)
   }
 
   return (

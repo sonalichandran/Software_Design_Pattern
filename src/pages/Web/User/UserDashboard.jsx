@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const UserDashboard = () => {
-  const [username, setUsername] = useState('John Doe');
-  const [address, setAddress] = useState('2/342 XXX, YYY, ZZZ');
-  const [dob, setDob] = useState('2005-01-01');
-  const [phoneNumber, setPhoneNumber] = useState('123-456-7890');
-  const [email, setEmail] = useState('john.doe@example.com');
+
+  const usernameur=useRef();
+  const addressur=useRef();
+  const dobur=useRef();
+  const phonenumberur=useRef();
+  const emailur=useRef();
+  
 
   const handleSaveChanges = () => {
+    const updatedUserData = {
+      username: usernameur.current.value,
+      address: addressur.current.value,
+      dob: dobur.current.value,
+      phoneNumber: phonenumberur.current.value,
+      email: emailur.current.value,
+    };
 
     alert('Changes saved!');
   };
@@ -28,8 +37,8 @@ const UserDashboard = () => {
           <input
             type="text"
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            ref={usernameur}
+         
           />
         </div>
         <div className="mb-4 flex items-center">
@@ -37,8 +46,7 @@ const UserDashboard = () => {
           <input
             type="text"
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            ref={addressur}
           />
         </div>
         <div className="mb-4 flex items-center">
@@ -46,8 +54,7 @@ const UserDashboard = () => {
           <input
             type="date"
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            value={dob}
-            onChange={(e) => setDob(e.target.value)}
+            ref={dobur}
           />
         </div>
         <div className="mb-4 flex items-center">
@@ -55,8 +62,7 @@ const UserDashboard = () => {
           <input
             type="text"
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
+            ref={phonenumberur}
           />
         </div>
         <div className="mb-4 flex items-center">
@@ -64,8 +70,7 @@ const UserDashboard = () => {
           <input
             type="email"
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            ref={emailur}
           />
         </div>
         <div className="flex justify-between">

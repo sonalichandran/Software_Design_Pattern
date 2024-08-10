@@ -5,16 +5,16 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate=useNavigate();
-  const emailur=useRef();
+  const usernameur=useRef();
   const passwordur=useRef();
   const handlelogin=async (e)=>{
     e.preventDefault();
   const signin={
-    email:emailur.current.value,
+    username:usernameur.current.value,
     password:passwordur.current.value
   }
-  const response=await axios.post("http://localhost:8080/request/login",signin)
-  if(response.data=="Login successful")
+  const response=await axios.post("http://localhost:8080/api/auth/login",signin)
+  if(response.data)
   {
     setTimeout(() => {
       navigate('/');
@@ -32,13 +32,13 @@ const Login = () => {
         <h2 className="text-2xl font-bold  mb-6 flex items-center justify-center">Login</h2>
         <form onSubmit={handlelogin}>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-white-100">Email</label>
+            <label htmlFor="username" className="block text-sm font-medium text-white-100">Username</label>
             <input
-              type="email"
-              id="email"
-              ref={emailur}
+              type="text"
+              id="username"
+              ref={usernameur}
               className="mt-1 block w-full px-3 py-2 border text-black  border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="you@example.com"
+              placeholder="username"
             />
           </div>
           <div className="mb-4">
